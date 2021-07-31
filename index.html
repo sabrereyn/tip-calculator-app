@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="calculate()">
+    <div id="title" class="marg-btm">
+      <p>SPLI</p>
+      <p>TTER</p>
+    </div>
+
+    <div id="container" class="marg-btm">
+      <div id="customize-tip">
+        <div id="bill" class="relative marg-btm">
+          <h1 class="headings">Bill</h1>
+          <input
+            type="number"
+            name="bill"
+            id="input-bill"
+            class="input"
+            value="0.00"
+            oninput="twoDecimals(this)"
+          />
+          <img
+            class="input-icons"
+            src="images/icon-dollar.svg"
+            alt="icon-dollar"
+          />
+        </div>
+
+        <div id="tip" class="marg-btm">
+          <h1 class="headings">Select Tip %</h1>
+          <div id="tip-btns">
+            <button class="tip-btn tip-input" value="5">5%</button>
+            <button class="tip-btn tip-input" value="10">10%</button>
+            <button class="tip-btn tip-input" value="15">15%</button>
+            <button class="tip-btn tip-input" value="25">25%</button>
+            <button class="tip-btn tip-input" value="50">50%</button>
+            <input
+              type="number"
+              name="custom"
+              id="custom"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div id="people" class="relative">
+          <h1 class="headings">Number of People</h1>
+          <p id="error-msg">Can't be zero</p>
+          <input
+            type="number"
+            name="people"
+            id="input-people"
+            class="input"
+            value="1"
+          />
+          <img
+            class="input-icons"
+            src="images/icon-person.svg"
+            alt="icon-person"
+          />
+        </div>
+      </div>
+
+      <div id="calculation">
+        <div id="tip-amt" class="marg-btm calc-grid">
+          <div class="display-labels">
+            <h1 class="headings">Tip Amount</h1>
+            <p class="p-person">/ person</p>
+          </div>
+          <p id="display-tip-amt" class="display-calc"></p>
+        </div>
+
+        <div id="total" class="marg-btm calc-grid">
+          <div class="display-labels">
+            <h1 class="headings">Total</h1>
+            <p class="p-person">/ person</p>
+          </div>
+          <p id="display-total-amt" class="display-calc"></p>
+        </div>
+        <button type="submit" id="reset">RESET</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Sabre</a>.
+    </div>
+
+    <!-- jQuery -->
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+  </body>
+</html>

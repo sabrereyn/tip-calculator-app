@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+html {
+  background-color: hsl(185, 41%, 84%);
+}
+
+body {
+  margin: 2rem 10px;
+}
+
+/* ~~~ Title ~~~ */
+
+#title {
+  text-align: center;
+}
+
+#title > p {
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 1.5;
+}
+
+/* ~~~ Container ~~~ */
+
+#container {
+  width: 100%;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+}
+
+/* ~~~ Headers ~~~ */
+.headings {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* ~~~ Customize Tip ~~~ */
+#customize-tip {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#tip-btns {
+  width: inherit;
+  margin-top: 1rem;
+
+  /* Grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+#tip-btns > * {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 0;
+
+  font-size: 18px;
+}
+
+.tip-btn {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+}
+
+#custom {
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  padding: 0 10px;
+  outline: none;
+
+  /* Font */
+  text-align: right;
+  font-weight: 500;
+  color: hsl(183, 100%, 15%);
+}
+
+.input {
+  width: 100%;
+  padding: 5px 15px 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  outline: none;
+
+  /* Font */
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+
+.input:focus,
+#custom:focus {
+  box-shadow: 0 0 0 2px hsl(172, 67%, 45%);
+}
+
+.input-icons {
+  position: absolute;
+  left: 13px;
+  bottom: 14px;
+}
+/* ~~~ Calculation ~~~ */
+#calculation {
+  padding: 1.5rem 1.2rem;
+
+  border-radius: 15px;
+
+  background-color: hsl(183, 100%, 15%);
+}
+
+.display-labels h1 {
+  color: hsl(189, 41%, 97%);
+  font-weight: 500;
+}
+
+.display-labels p {
+  color: hsl(184, 14%, 56%);
+  font-size: 12px;
+}
+
+.display-calc {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: hsl(172, 67%, 45%);
+}
+
+#reset {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+
+  padding: 10px;
+  background-color: hsl(172, 67%, 45%);
+
+  font-weight: 700;
+  font-size: 15px;
+  color: hsl(183, 100%, 15%);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ~~~ General classes ~~~ */
+.relative {
+  position: relative;
+}
+
+.marg-btm {
+  margin-bottom: 2rem;
+}
+
+button:hover,
+#reset:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: hsl(172, 67%, 45%);
+}
+
+/* ~~~ Error ~~~ */
+.error {
+  box-shadow: 0 0 0 2px hsl(0, 100%, 74%);
+}
+
+#error-msg {
+  visibility: hidden;
+  font-size: 12px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    width: 70%;
+    margin: auto auto 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #container {
+    display: flex;
+    width: 70%;
+  }
+
+  #customize-tip {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  #calculation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+
+  #tip-btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #reset {
+    margin-top: auto;
+  }
+
+  .display-calc {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #container {
+    width: 55%;
+  }
+}
